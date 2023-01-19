@@ -1,0 +1,172 @@
+{
+    "songs": {
+      "aliases": {
+        "search-sinhala-songs": {}
+      },
+      "mappings": {
+        "properties": {
+          "Artists": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "analyzer": "sinhala_analyzer"
+          },
+          "Genre": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "analyzer": "sinhala_analyzer"
+          },
+          "Lyricists": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "analyzer": "sinhala_analyzer"
+          },
+          "Lyrics": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "analyzer": "sinhala_analyzer"
+          },
+          "Music Composers": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "analyzer": "sinhala_analyzer"
+          },
+          "Title": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "analyzer": "sinhala_analyzer"
+          },
+          "meaning": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "analyzer": "sinhala_analyzer"
+          },
+          "metaphors": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            },
+            "analyzer": "sinhala_analyzer"
+          },
+          "timestamp": {
+            "type": "float"
+          }
+        }
+      },
+      "settings": {
+        "index": {
+          "routing": {
+            "allocation": {
+              "include": {
+                "_tier_preference": "data_content"
+              }
+            }
+          },
+          "number_of_shards": "1",
+          "provided_name": "songs",
+          "creation_date": "1674054555773",
+          "analysis": {
+            "filter": {
+              "stop_filter": {
+                "type": "stop",
+                "stopwords": [
+                  "ගත්කරු",
+                  "රචකයා",
+                  "ලියන්නා",
+                  "ලියන",
+                  "රචිත",
+                  "ලියපු",
+                  "ලියව්‌ව",
+                  "රචනා",
+                  "රචක",
+                  "ලියන්",
+                  "ලිවූ",
+                  "ගායකයා",
+                  "ගයනවා",
+                  "ගායනා",
+                  "ගායනා",
+                  "ගැයු",
+                  "ගයන",
+                  "කිව්",
+                  "කිවු",
+                  "සංගීත",
+                  "සංගීතවත්",
+                  "සංගීතය",
+                  "වර්ගය",
+                  "වර්‍ගයේ",
+                  "වර්ගයේම",
+                  "වර්ගයේ",
+                  "වැනි",
+                  "ඇතුලත්",
+                  "ඇතුලු",
+                  "විදියේ",
+                  "විදිහේ",
+                  "හොඳම",
+                  "ජනප්‍රිය",
+                  "ප්‍රචලිත",
+                  "ප්‍රසිද්ධම",
+                  "හොදම",
+                  "ජනප්‍රියම",
+                  "ලස්සනම",
+                  "ගීත",
+                  "සිංදු",
+                  "ගී",
+                  "සින්දු"
+                ]
+              },
+              "sinhala_ngram_filter": {
+                "min_gram": "2",
+                "side": "front",
+                "type": "edge_ngram",
+                "max_gram": "10"
+              }
+            },
+            "analyzer": {
+              "sinhala_analyzer": {
+                "filter": [
+                  "stop_filter",
+                  "sinhala_ngram_filter"
+                ],
+                "type": "custom",
+                "tokenizer": "icu_tokenizer"
+              }
+            }
+          },
+          "number_of_replicas": "1",
+          "uuid": "e6zJhLi-TE2qVRCZWgV-NA",
+          "version": {
+            "created": "8060099"
+          }
+        }
+      }
+    }
+  }
